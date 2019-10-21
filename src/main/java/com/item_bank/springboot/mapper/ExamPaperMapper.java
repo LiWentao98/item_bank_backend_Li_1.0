@@ -4,8 +4,8 @@ package com.item_bank.springboot.mapper;
 试卷类的Mapper接口
  */
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository("examPaperMapper")
 public interface ExamPaperMapper {
 }

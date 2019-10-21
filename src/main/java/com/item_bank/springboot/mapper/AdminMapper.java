@@ -7,9 +7,9 @@ package com.item_bank.springboot.mapper;
 import com.item_bank.springboot.pojo.Admin;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository("adminMapper")
 public interface AdminMapper {
     //根据职工号和登陆密码查询管理员
     @Select("select * from admin where job_number=#{jobNumber} and password=#{password} ")
