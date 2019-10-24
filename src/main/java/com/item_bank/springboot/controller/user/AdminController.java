@@ -8,10 +8,7 @@ AdminController
 import com.item_bank.springboot.service.user.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,6 +24,9 @@ public class AdminController {
     public HashMap login(@RequestBody Map map){
         String username = map.get("username").toString();
         String password = map.get("password").toString();
-        return userService.adminLogin(username, password);
+        for (Object value : map.values()) {
+            System.out.println("key = " + value);
+        }
+        return null;
     }
 }
