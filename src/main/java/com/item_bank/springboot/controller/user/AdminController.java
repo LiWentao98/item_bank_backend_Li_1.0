@@ -5,7 +5,7 @@ AdminController
 管理员的视图控制层
  */
 
-import com.item_bank.springboot.service.user.UserServiceImpl;
+import com.item_bank.springboot.service.user.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

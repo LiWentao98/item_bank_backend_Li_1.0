@@ -1,6 +1,7 @@
 package com.item_bank.springboot;
 
 import com.item_bank.springboot.pojo.Question;
+import com.item_bank.springboot.pojo.Teacher;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
@@ -91,5 +92,18 @@ public class MultiSql {
             SELECT("*");
            FROM("question");
         }}.toString();
+    }
+
+    public String insertTeacher(Teacher teacher){
+        String sql = new SQL()
+                .INSERT_INTO("teacher")
+                .VALUES("t_id, t_type","#{t_id}, #{t_type}")
+                .VALUES("school, faculty","#{school}, #{faculty}")
+                .VALUES("t_subject, job_number","#{t_subject}, #{job_number}")
+                .VALUES("password, name","#{password}, #{name}")
+                .VALUES("id_number, email","#{id_number}, #{email}")
+                .VALUES("telephone, a_id","#{telephone}, #{a_id}")
+                .toString();
+        return sql;
     }
 }

@@ -1,6 +1,7 @@
 package com.item_bank.springboot;
 
 import com.item_bank.springboot.pojo.Question;
+import com.item_bank.springboot.pojo.Teacher;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
@@ -14,10 +15,12 @@ public class TestMultiSql {
 //        System.out.println(multiSql.insertPersonSql3());
 //        //测试得出，两者得到的结果一样
         Question question = new Question();
+        Teacher teacher = new Teacher();
         question.setQ_id(5);
         question.setDifficulty("简单");
         question.setKnowledge("数据结构");
         System.out.println(multiSql.insertPersonSql4(question));
-        System.out.println(multiSql.insertPersonSql5(question));
+//        System.out.println(multiSql.insertPersonSql5(question));
+  //      System.out.println(multiSql.insertTeacher(teacher));
     }
 }
